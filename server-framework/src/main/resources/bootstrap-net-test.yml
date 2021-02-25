@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 10.64.12.5:18488
+        namespace: d1169317-c48f-4002-86f3-e18af6fff8f0
+      discovery:
+        ip: ${SERVER_DISCOVER_IP:127.0.0.1}
+        server-addr: 10.64.12.5:18488
+        namespace: d1169317-c48f-4002-86f3-e18af6fff8f0
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+logging:
+  config: classpath:log/logback-spring-test.xml

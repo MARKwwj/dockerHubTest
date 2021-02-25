@@ -1,0 +1,57 @@
+#spring:
+#  datasource:
+#    druid:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://192.168.100.51:3306/long_video_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#      username: root
+#      password: 123456
+#  jedis:
+#    use: standalone
+#    standalone:
+#      host: 192.168.100.49
+#      port: 6379
+#      timeout: 5000
+#      max-active: 8
+#      max-idle: 2
+#      min-idle: 0
+#      max-wait: 10000
+#  jackson:
+#    # 自定义jackson转换日期时的格式
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    # spring-boot-start-web中使用jackson将对象转换成json串，会将Date类型的参数进行日期格式化，默认时区UTC
+#    time-zone: Asia/Shanghai
+#  rabbitmq:
+#    host: 192.168.100.49
+#    port: 5672
+#    username: guest
+#    password: guest
+#    virtual-host: /
+#
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*Mapper.xml
+#  type-aliases-package: com.magic.longvideo.pojo.entity
+#  config-location: classpath:mybatis/mybatis-config.xml
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          #如果enabled设置为false，则请求超时交给ribbon超时时间为准,为true,则超时以熔断时间为准
+#          enabled: true
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 2000 #断路器超时时间，默认1000ms
+#
+#feign:
+#  hystrix:
+#    enabled: true
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 7000 # feign 的超时设置
+#        readTimeout: 7000
+#swagger:
+#  title: 长视频API接口文档
+#  version: 1.0.0
+#  enabled: true

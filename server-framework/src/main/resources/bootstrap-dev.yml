@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 192.168.100.49:8848
+        namespace: 56525077-e2d3-4f03-b8a2-c972fc141235
+      discovery:
+        server-addr: 192.168.100.49:8848
+        namespace: 56525077-e2d3-4f03-b8a2-c972fc141235
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+logging:
+  config: classpath:log/logback-spring-dev.xml

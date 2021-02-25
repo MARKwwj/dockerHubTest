@@ -1,0 +1,12 @@
+server:
+  port: 8101
+spring:
+  profiles:
+    active: ${RUN_ENV:dev}
+  application:
+    name: local-gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

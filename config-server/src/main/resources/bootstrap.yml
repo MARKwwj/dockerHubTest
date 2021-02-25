@@ -1,0 +1,12 @@
+server:
+  port: 8807
+spring:
+  profiles:
+    active: ${RUN_ENV:dev}
+  application:
+    name: config-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

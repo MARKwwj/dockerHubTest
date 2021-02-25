@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.magic.longvideo.mapper.LongVideoUserFavoriteMapper">
+
+    <!--查询单个-->
+    <insert id="insertOnDuplicateKeyUpdate" parameterType="LongVideoUserFavoriteEntity">
+        INSERT INTO
+            long_video_user_favorite (user_id,video_favorite_infos) values(#{userId},#{videoFavoriteInfos})
+        ON DUPLICATE KEY UPDATE
+            video_favorite_infos=#{videoFavoriteInfos}
+    </insert>
+
+</mapper>

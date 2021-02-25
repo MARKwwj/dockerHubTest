@@ -1,0 +1,12 @@
+server:
+  port: 8803
+spring:
+  profiles:
+    active: ${RUN_ENV:dev}
+  application:
+    name: search-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

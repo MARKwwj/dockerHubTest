@@ -1,0 +1,12 @@
+server:
+  port: 8801
+spring:
+  profiles:
+    active: ${RUN_ENV:dev}
+  application:
+    name: long-video-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

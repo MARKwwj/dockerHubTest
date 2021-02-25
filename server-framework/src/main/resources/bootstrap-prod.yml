@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 172.16.7.34:18488
+        namespace: 1f5f1468-36da-4713-bccb-5acde9e238b1
+      discovery:
+        ip: ${SERVER_DISCOVER_IP:127.0.0.1}
+        server-addr: 172.16.7.34:18488
+        namespace: 1f5f1468-36da-4713-bccb-5acde9e238b1
+    gateway:
+      discovery:
+        locator:
+          enabled: true

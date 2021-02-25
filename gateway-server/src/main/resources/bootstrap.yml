@@ -1,0 +1,28 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 192.168.100.49:8848
+        namespace: 57980c03-7a91-4a1c-b4bc-a480da229fd7
+      discovery:
+        server-addr: 192.168.100.49:8848
+        namespace: 57980c03-7a91-4a1c-b4bc-a480da229fd7
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  jedis:
+    use: standalone
+    standalone:
+      host: 192.168.100.49
+      port: 6379
+      timeout: 5000
+      max-active: 8
+      max-idle: 2
+      min-idle: 0
+      max-wait: 10000
